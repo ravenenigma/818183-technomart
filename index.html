@@ -7,13 +7,12 @@
  	<body>
  		<header class="page-header">
  			<div class="header-top">
- 				<a class="button-logo" href="index.html" >Техномарт</a>
+ 				<a class="button-logo" href="index.html">Техномарт</a>
  				<form class="search-form" action="#" method="get">
-          			<input type="search" name="search" id="search" placeholder="Поиск:">
-		        	<span class="icon-search">Иконка</span>
-		        </form>
- 				<div class="shop-controls">
- 					<a href="#" class="shop-bookmarks">Закладки: 0</a>
+ 					<input type="search" name="search" id="search" placeholder="Поиск:">
+          		</form>
+          		<div class="shop-controls">
+          			<a href="#" class="shop-bookmarks">Закладки: 0</a>
 	 				<a href="#" class="shop-basket">Корзина: 0</a>
 	 				<a href="#" class="shop-ordering">Оформить заказ</a>
  				</div>
@@ -36,7 +35,7 @@
  			<div class="header-bottom">
  				<nav class="main-navigation">
 	        		<ul class="site-navigation">
-			         	<li><a href="index.html">Главная</a></li>
+			         	<li><a>Главная</a></li>
 			         	<li><a href="company.html">Компания</a></li>
 			         	<li><a href="catalog.html">Каталог</a></li>
 			         	<li><a href="news.html">Новости</a></li>
@@ -50,7 +49,7 @@
  		<main class="container">
  			<section class="offers">
  				<h2 class="visually-hidden">Наши предложения</h2>
- 				<div class="offers-box materials">
+ 				<div class="offers-box materials mark-new">
  					<h3 class="offers-title">Материалы</h3>
  					<a href="#" class="button materials-button">На любой вкус</a>
  				</div>
@@ -87,8 +86,10 @@
  			</section>
 
  			<section class="popular-products">
- 				<h2 class="section-title">Популярные товары:</h2>
- 				<a href="#" class="button products-button">Все популярные товары</a>
+ 				<div class="products-header">
+ 					<h2 class="section-title">Популярные товары:</h2>
+ 					<a href="#" class="button products-button">Все популярные товары</a>
+ 				</div>
  				<ul class="products-list">
  					<li>
  						<h3 class="products-title">Перфоратор BOSCH BFG 9000</h3>
@@ -125,8 +126,10 @@
  			</section>
 
  			<section class="popular-brands">
- 				<h2 class="section-title">Популярные производители:</h2>
-                <a href="#" class="button brands-button">Все производители</a>
+ 				<div class="brands-header">
+ 					<h2 class="section-title">Популярные производители:</h2>
+                	<a href="#" class="button brands-button">Все производители</a>
+ 				</div>
  				<ul class="brands-list">
  					<li>
  						<a href="#" target="_blank">
@@ -190,8 +193,8 @@
  				</ul>
 	            <div class="slider-content">
 	             	<div class="slider-description">
-	                	<span class="service-slider-title">Доставка</span>
-	                	<p class="service-slider-text">
+	                	<h3>Доставка</h3>
+	                	<p>
 	                		Мы с удовольствием доставим ваш товар прямо
 	                		к вашему подъезду совершенно бесплатно!
 	                		Ведь мы неплохо заработаем,<br>
@@ -199,8 +202,8 @@
 	                	</p>
 	              	</div>
 	             	<div class="slider-description">
-	                	<span class="service-slider-title">Гарантия</span>
-	                	<p class="service-slider-text">
+	                	<h3>Гарантия</h3>
+	                	<p>
 	                		Если купленный у нас товар поломается или заискрит,
 	                		а также в случае пожара, спровоцированного его возгаранием, вы
 	                		всегда можете быть уверены в нашей гарантии. Мы обменяем
@@ -209,8 +212,8 @@
 	                	</p>
 	              	</div>
 	              	<div class="slider-description">
-	                	<span class="service-slider-title">Кредит</span>
-	                	<p class="service-slider-text">
+	                	<h3>Кредит</h3>
+	                	<p>
 	                		Залезть в долговую яму стало проще!
 	                		Кредитные консультанты придут вам на помощь.
 	                	</p>
@@ -252,7 +255,7 @@
  				<div class="footer-top">
  					<a class="button-logo" href="index.html">Техномарт</a>
  					<p class="footer-contacts">
-                        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
                         +7 (812) 555-05-55
                     </p>
                     <nav class="footer-navigation">
@@ -284,11 +287,11 @@
 				        </ul>
 				    </div>
 				    <p class="footer-feedback">
-				        <b>Обратная Связь:</b> 
+				        <span>Обратная Связь:</span> 
 				        <a href="#" class="button feedback-button">mail@htmlacademy.ru</a>
 				    </p>
 				    <p class="footer-developer">
-				        <b>Разработано-</b> 
+				        <span>Разработано-</span> 
 				        <a href="https://htmlacademy.ru" class="button developer-button" target="_blank">htmlacademy.ru</a>
 				    </p>
  				</div>

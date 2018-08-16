@@ -2,6 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
@@ -9,27 +11,28 @@
       <div class="header-top">
         <a class="button-logo" href="index.html">Техномарт</a>
         <form class="search-form" action="#" method="get">
-          <input type="search" name="search" id="search" placeholder="Поиск:">
+          <input class="search-title" type="search" name="search" placeholder="Поиск:">
+          <button class="search-button" type="submit"></button>
         </form>
         <div class="shop-controls">
-          <a href="#" class="shop-bookmarks">Закладки: <span class="bookmarks-count">0</span></a>
-          <a href="#" class="shop-basket">Корзина: <span class="basket-count">0</span></a>
-          <a href="#" class="shop-ordering">Оформить заказ</a>
+          <a class="shop-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
+          <a class="shop-basket" href="#">Корзина: <span class="basket-count">0</span></a>
+          <a class="shop-ordering" href="#">Оформить заказ</a>
         </div>
       </div>
 
       <div class="header-middle">
         <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
         <div class="header-contacts">
-          <a href="tel:+78125550555" class="contact-telephone icon-phone">+7 (812) 555-05-55</a>
+          <a class="contact-telephone icon-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <ul class="user-navigation">
           <li>
-            <a href="#" class="login-link">Вход</a>
+            <a class="login-link" href="#">Вход</a>
           </li>
           <li>
-            <a href="#" class="registration-link">Регистрация</a>
+            <a class="registration-link" href="#">Регистрация</a>
           </li>
         </ul>
       </div>
@@ -54,15 +57,15 @@
         <div class="offers-row">
           <div class="offers-box materials mark-new">
             <h3 class="offers-title">Материалы</h3>
-            <a href="#" class="button materials-button">На любой вкус</a>
+            <a class="button materials-button" href="#">На любой вкус</a>
           </div>
           <div class="offers-box instruments">
             <h3 class="offers-title">Инструменты</h3>
-            <a href="#" class="button instruments-button">На все случаи</a>
+            <a class="button instruments-button" href="#">На все случаи</a>
           </div>
           <div class="offers-box technics">
             <h3 class="offers-title">Техника</h3>
-            <a href="#" class="button technics-button">Для стройки</a>
+            <a class="button technics-button" href="#">Для стройки</a>
           </div>
         </div>
         <div class="offers-row">
@@ -71,12 +74,12 @@
               <div class="offers-slider-content">
                 <h3 class="slider-title">Перфораторы</h3>
                 <p class="slider-text">Настоящие мужские игрушки</p>
-                <a href="catalog.html">Открыть каталог</a>
+                <a class="button slider-button-item" href="catalog.html">Открыть каталог</a>
               </div>
               <div class="offers-slider-content">
                 <h3 class="slider-title">Дрели</h3>
                 <p class="slider-text">Соседям на радость!</p>
-                <a href="catalog.html">Открыть каталог</a>
+                <a class="button slider-button-item" href="catalog.html">Открыть каталог</a>
               </div>
               <span class="button slider-button slider-button-back">Назад</span>
               <span class="button slider-button slider-button-next">Вперед</span>
@@ -85,11 +88,11 @@
           <div class="offers-col offers-col-right">
             <div class="offers-box discount">
               <h3 class="offers-title">Скидки 50%</h3>
-              <a href="#" class="button discount-button">На 350 товаров</a>
+              <a class="button discount-button" href="#">На 350 товаров</a>
             </div>
             <div class="offers-box delivery">
               <h3 class="offers-title">Доставка</h3>
-              <a href="#" class="button delivery-button">Бесплатно</a>
+              <a class="button delivery-button" href="#">Бесплатно</a>
             </div>
           </div>
         </div>
@@ -98,47 +101,47 @@
       <section class="popular-products">
         <div class="products-header">
           <h2 class="section-title">Популярные товары:</h2>
-          <a href="#" class="button products-button">Все популярные товары</a>
+          <a class="button products-button" href="#">Все популярные товары</a>
         </div>
         <div class="products-list">
           <div class="catalog-item">
             <img src="img/bosch-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
             <div class="item-toggle">
-              <a href="#" class="button products-button basket-button">Купить</a>
-              <a href="#" class="button products-button bookmarks-button">В закладки</a>
+              <a class="button products-button basket-button" href="#">Купить</a>
+              <a class="button products-button bookmarks-button" href="#">В закладки</a>
             </div>
             <h3 class="products-title">Перфоратор BOSCH BFG 9000</h3>
             <span class="products-discount">32500 р.</span>
-            <a href="#" class="button products-button price-button">25500 р.</a>
+            <a class="button products-button price-button" href="#">25500 р.</a>
           </div>
           <div class="catalog-item">
             <img src="img/bosch-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
             <div class="item-toggle">
-              <a href="#" class="button products-button basket-button">Купить</a>
-              <a href="#" class="button products-button bookmarks-button">В закладки</a>
+              <a class="button products-button basket-button" href="#">Купить</a>
+              <a class="button products-button bookmarks-button" href="#">В закладки</a>
             </div>
             <h3 class="products-title">Перфоратор BOSCH BFG 3000</h3>
             <span class="products-discount">22500 р.</span>
-            <a href="#" class="button products-button price-button">15500 р.</a>
+            <a class="button products-button price-button" href="#">15500 р.</a>
           </div>
           <div class="catalog-item">
             <img src="img/bosch-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
             <div class="item-toggle">
-              <a href="#" class="button products-button basket-button">Купить</a>
-              <a href="#" class="button products-button bookmarks-button">В закладки</a>
+              <a class="button products-button basket-button" href="#">Купить</a>
+              <a class="button products-button bookmarks-button" href="#">В закладки</a>
             </div>
             <h3 class="products-title">Перфоратор BOSCH BFG 6000</h3>
             <span class="products-discount">30500 р.</span>
-            <a href="#" class="button products-button price-button">25500 р.</a>
+            <a class="button products-button price-button" href="#">25500 р.</a>
           </div>
           <div class="catalog-item mark-new">
             <img src="img/bosch-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
             <div class="item-toggle">
-              <a href="#" class="button products-button basket-button">Купить</a>
-              <a href="#" class="button products-button bookmarks-button">В закладки</a>
+              <a class="button products-button basket-button" href="#">Купить</a>
+              <a class="button products-button bookmarks-button" href="#">В закладки</a>
             </div>
             <h3 class="products-title">Перфоратор BOSCH BFG 2000</h3>
-            <a href="#" class="button products-button price-button">12500 р.</a>
+            <a class="button products-button price-button" href="#">12500 р.</a>
           </div>
         </div>
       </section>
@@ -146,7 +149,7 @@
       <section class="popular-brands">
         <div class="brands-header">
           <h2 class="section-title">Популярные производители:</h2>
-          <a href="#" class="button brands-button">Все производители</a>
+          <a class="button brands-button" href="#">Все производители</a>
         </div>
         <ul class="brands-list">
           <li>
@@ -230,7 +233,7 @@
                 Залезть в долговую яму стало проще!
                 Кредитные консультанты придут вам на помощь.
               </p>
-              <a href="#" class="">Отправить заявку</a>
+              <a class="button credit-button-item"  href="#">Отправить заявку</a>
             </div>
           </div>
         </div>
@@ -253,7 +256,7 @@
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a href="company.html" class="button company-button">Подробнее о Компании</a>
+          <a class="button company-button" href="company.html">Подробнее о Компании</a>
         </section>
         <section class="contacts-column">
           <h2 class="section-title">Контакты</h2>
@@ -263,7 +266,7 @@
           </p>
           <img src="img/map-preview.jpg" width="300" height="158" alt="«Техномарт» на карте">
           <!-- Здесь будет iframe -->
-          <a href="#" class="button contacts-button">Заблудились? Напишите нам!</a>
+          <a class="button contacts-button" href="#">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
@@ -301,23 +304,23 @@
         <div class="footer-social">
           <ul>
             <li>
-              <a href="https://vk.com/htmlacademy" class="social-button icon-vk" target="_blank">Вконтакте</a>
+              <a class="social-button icon-vk" href="https://vk.com/htmlacademy" target="_blank">Вконтакте</a>
             </li>
             <li>
-              <a href="https://www.facebook.com/htmlacademy" class="social-button icon-fb" target="_blank">Фейсбук</a>
+              <a class="social-button icon-fb" href="https://www.facebook.com/htmlacademy" target="_blank">Фейсбук</a>
             </li>
             <li>
-              <a href="https://www.instagram.com/htmlacademy/" class="social-button icon-insta" target="_blank">Инстаграм</a>
+              <a class="social-button icon-insta" href="https://www.instagram.com/htmlacademy/" target="_blank">Инстаграм</a>
             </li>
           </ul>
         </div>
         <p class="footer-feedback">
           <span>Обратная Связь:</span>
-          <a href="#" class="button feedback-button">mail@htmlacademy.ru</a>
+          <a class="button feedback-button" href="#">mail@htmlacademy.ru</a>
         </p>
         <p class="footer-developer">
           <span>Разработано-</span>
-          <a href="https://htmlacademy.ru" class="button developer-button" target="_blank">htmlacademy.ru</a>
+          <a class="button developer-button" href="https://htmlacademy.ru" target="_blank">htmlacademy.ru</a>
         </p>
       </div>
     </footer>

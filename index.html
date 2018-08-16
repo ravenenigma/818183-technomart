@@ -12,8 +12,8 @@
           <input type="search" name="search" id="search" placeholder="Поиск:">
         </form>
         <div class="shop-controls">
-          <a href="#" class="shop-bookmarks">Закладки: 0</a>
-          <a href="#" class="shop-basket">Корзина: 0</a>
+          <a href="#" class="shop-bookmarks">Закладки: <span class="bookmarks-count">0</span></a>
+          <a href="#" class="shop-basket">Корзина: <span class="basket-count">0</span></a>
           <a href="#" class="shop-ordering">Оформить заказ</a>
         </div>
       </div>
@@ -151,42 +151,42 @@
         <ul class="brands-list">
           <li>
             <a href="https://www.bosch.ru/" target="_blank">
-              <img src="img/bosch.png" width="126" height="37" alt="BOSH">
+              <img src="img/brand-bosch.png" width="126" height="37" alt="BOSH">
             </a>
           </li>
           <li>
             <a href="http://makita.ru/" target="_blank">
-              <img src="img/makita.png" width="123" height="40" alt="MAKITA">
+              <img src="img/brand-makita.png" width="123" height="40" alt="MAKITA">
             </a>
           </li>
           <li>
             <a href="http://www.dewalt.ru/" target="_blank">
-              <img src="img/dewalt.png" width="146" height="44" alt="DeWALT">
+              <img src="img/brand-dewalt.png" width="146" height="44" alt="DeWALT">
             </a>
           </li>
           <li>
             <a href="http://www.interskol.ru/" target="_blank">
-              <img src="img/интерскол.png" width="200" height="57" alt="ИНТЕРСКОЛ">
+              <img src="img/brand-interskol.png" width="200" height="57" alt="ИНТЕРСКОЛ">
             </a>
           </li>
           <li>
             <a href="http://www.hitachi.ru/ru" target="_blank">
-              <img src="img/hitachi.png" width="169" height="31" alt="HITACHI">
+              <img src="img/brand-hitachi.png" width="169" height="31" alt="HITACHI">
             </a>
           </li>
           <li>
             <a href="https://www.lg.com/ru" target="_blank">
-              <img src="img/lg.png" width="121" height="73" alt="LG">
+              <img src="img/brand-lg.png" width="121" height="73" alt="LG">
             </a>
           </li>
           <li>
             <a href="http://www.aegps.ru/" target="_blank">
-              <img src="img/aeg.png" width="151" height="96" alt="AEG Power Solutions">
+              <img src="img/brand-aeg.png" width="151" height="96" alt="AEG Power Solutions">
             </a>
           </li>
           <li>
             <a href="https://www.metabo.com/ru/ru/" target="_blank">
-              <img src="img/bosch.png" width="204" height="69" alt="METABO">
+              <img src="img/brand-metabo.png" width="204" height="69" alt="METABO">
             </a>
           </li>
         </ul>
@@ -262,7 +262,7 @@
             заехав в наш офис.
           </p>
           <img src="img/map-preview.jpg" width="300" height="158" alt="«Техномарт» на карте">
-          <!--- Здесь будет iframe --->
+          <!-- Здесь будет iframe -->
           <a href="#" class="button contacts-button">Заблудились? Напишите нам!</a>
         </section>
       </div>
@@ -322,14 +322,23 @@
       </div>
     </footer>
 
-    <section class="modal modal-login">
+    <section class="modal modal-contacts">
       <div class="modal-substrate"></div> <!-- Подложка нужна для закрытия модалки, при нажатии по пустой области с помощью js -->
-      <div class="modal-body">
-        <h2>Личный кабинет</h2>
-        <span class="modal-close">x</span>
-        <p>Введите свой логин и пароль.</p>
-        <!-- Здесь будет форма -->
-      </div>
+      <form class="modal-form" action="/echo" method="post">
+        <div class="modal-half-width">
+          <label for="name-field">Ваше имя:</label>
+          <input type="text" name="name" id="name-field" placeholder="Имя Фамилия" required>
+          <label for="name-field">Ваш e-mail:</label>
+          <input type="email" name="email" id="email-field" placeholder="email@example.com" required>
+        </div>
+        <div class="modal-half-width">
+          <label for="letter-field">Текст письма:</label>
+          <input type="text" name="letter" id="letter-field" placeholder="В свободной форме" required>
+        </div>
+        <div class="modal-half-width modal-bottom">
+          <button type="submit" class="button modal-button">Отправить</button>
+        </div>
+      </form>
     </section>
 
     <section class="modal modal-map">
@@ -339,5 +348,4 @@
         <span class="modal-close">x</span>
       </div>
     </section>
-  </body>
 </html>

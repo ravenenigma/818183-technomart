@@ -9,11 +9,12 @@
       <div class="header-top">
         <a class="button-logo" href="index.html" >Техномарт</a>
         <form class="search-form" action="#" method="get">
-          <input type="search" name="search" id="search" placeholder="Поиск:">
+          <input type="search" name="search" class="search-title" placeholder="Поиск:">
+          <button type="submit" class="search-button"></button>
         </form>
         <div class="shop-controls">
-          <a href="#" class="shop-bookmarks">Закладки: 0</a>
-          <a href="#" class="shop-basket">Корзина: 10</a>
+          <a href="#" class="shop-bookmarks">Закладки: <span class="bookmarks-count">0</span></a>
+          <a href="#" class="shop-basket">Корзина: <span class="basket-count">10</span></a>
           <a href="#" class="shop-ordering">Оформить заказ</a>
         </div>
       </div>
@@ -44,7 +45,7 @@
           <ul class="site-navigation">
             <li><a href="index.html">Главная</a></li>
             <li><a href="company.html">Компания</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
+            <li><a>Каталог</a></li>
             <li><a href="news.html">Новости</a></li>
             <li><a href="discounts.html">Спецпредложения</a></li>
             <li><a href="delivery.html">Доставка</a></li>
@@ -62,35 +63,35 @@
       </ul>
       <h1 class="page-title">Перфораторы</h1>
       <div class="catalog">
-        <section class="filters">
+        <aside class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <!-- Здесь будет форма -->
-          <form action="/" method="get">
+          <form action="/echo" method="get">
             <!-- Фильтр по производителям -->
             <fieldset class="filter filter-brands">
               <legend class="form-title">Производители:</legend>
-              <input type="checkbox" name="" id="">
-              <label class="filter-text" name="" for="">Bosch</label>
-              <input type="checkbox" name="" id="">
-              <label class="filter-text" name="" for="">Интерскол</label>
-              <input type="checkbox" name="" id="">
-              <label class="filter-text" name="" for="">Makita</label>
-              <input type="checkbox" name="" id="">
-              <label class="filter-text" name="" for="">Dewalt</label>
-              <input type="checkbox" name="" id="">
-              <label class="filter-text" name="" for="">Hitachi</label>
+              <input class="filter-brands-item" type="checkbox" id="checkbox-bosh" checked>
+              <label class="filter-text" for="checkbox-bosh">Bosch</label>
+              <input class="filter-brands-item" type="checkbox" id="checkbox-interskol">
+              <label class="filter-text" for="checkbox-interskol">Интерскол</label>
+              <input class="filter-brands-item" type="checkbox" id="checkbox-makita">
+              <label class="filter-text" for="checkbox-makita">Makita</label>
+              <input class="filter-brands-item" type="checkbox" id="checkbox-dewalt" checked>
+              <label class="filter-text" for="checkbox-dewalt">Dewalt</label>
+              <input class="filter-brands-item" type="checkbox" id="checkbox-hitachi">
+              <label class="filter-text" for="checkbox-hitachi">Hitachi</label>
             </fieldset>
             <!-- Фильтр по питанию инструмента -->
             <fieldset class="filter filter-supply">
               <legend class="form-title">Питание:</legend>
-              <input type="radio" name="" id="">
-              <label class="filter-text" name="" for="">Аккумуляторные</label>
-              <input type="radio" name="" id="">
-              <label class="filter-text" name="" for="">Сетевые</label>
+              <input class="filter-supply-item" type="radio" name="radio" id="radio-battery" checked>
+              <label class="filter-text" for="radio-battery" >Аккумуляторные</label>
+              <input class="filter-supply-item" type="radio" name="radio" id="radio-network">
+              <label class="filter-text" for="radio-network">Сетевые</label>
             </fieldset>
             <button class="catalog-button" type="submit">Показать</button>
           </form>
-        </section>
+        </aside>
         <div class="catalog-content">
           <!-- Секция сортировки каталога -->
           <section class="catalog-sorting">

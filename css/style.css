@@ -1,0 +1,103 @@
+body {
+	min-width: 1200px;
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 24px;
+	font-family: "Arial", sans-serif;
+	color: #000000;
+}
+
+.page-header {
+	background-color: #f1f5f8;
+}
+
+.header-top {
+	color: #ffffff;
+	background-color: #293448;
+}
+
+.button {
+	display: block;
+    padding: 10px 0 10px 0;
+    width: 220px;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'Arial', sans-serif;
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ee3643;
+    border-radius: 3px;
+}
+
+.button:hover {
+    background-color: #ca2c37;
+    outline: none;
+}
+
+.button:active {
+    background-color: #ba2732;
+    outline: none;
+}
+
+.button-logo {
+	float: left;
+	width: 220px;
+	padding: 11px 0 7px 0;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 24px;
+    background-color: #ee3643;
+    box-shadow: 0 5px #b52933;
+}
+
+.search-button {
+	width: 17px;
+	height: 17px;
+	background: url("../img/icon-search.svg") no-repeat;
+	border: none;
+}
+
+.main-navigation {
+	display: block;
+	width: 940px;
+}
+
+.site-navigation {
+	margin: 0 auto;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.main-navigation .site-navigation {
+	display: -webkit-flex;
+	display: flex;
+	padding-left: 0;
+	background-color: #32425c;
+}
+
+.main-navigation a {
+	display: block;
+	padding: 20px 30px 18px 30px;
+	font-size: 17px;
+	line-height: 17px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #32425c;
+	border-bottom: 5px solid #293448;
+}
+
+.main-navigation a:hover {
+	background-color: #293448;
+}
+
+.main-navigation a:active {
+  color: rgba(255, 255, 255, 0.5);
+}

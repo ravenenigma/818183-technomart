@@ -1,11 +1,14 @@
+* {
+	font-family: "Cuprum", "Verdana", sans-serif;
+	font-weight: normal;
+}
+
 body {
-	min-width: 1200px;
 	margin: 0;
 	padding: 0;
+	min-width: 1200px;
 	font-size: 13px;
-	font-weight: normal;
 	line-height: 24px;
-	font-family: "Cuprum", "Arial", sans-serif;
 	color: #000000;
 }
 
@@ -51,18 +54,49 @@ body {
     line-height: 24px;
     background-color: #ee3643;
     box-shadow: 0 5px #b52933;
+    border-radius: 0;
 }
 
-.search-button {
-	width: 17px;
-	height: 17px;
-	background: url("../img/icon-search.svg") no-repeat;
+.search-form {
+	display: flex;
+	padding-left: 0;
+	width: 270px;
+	height: 40px;
+}
+
+.search-input {
+	font-size: 17px;
+	line-height: 18px;
+	color: #ffffff;
+	background-color: transparent;
 	border: none;
+	opacity: 1;
+}
+
+input[type="search"]::-webkit-input-placeholder {opacity: 1; color: #ffffff;}
+input[type="search"]::-moz-placeholder          {opacity: 1; color: #ffffff;}
+input[type="search"]:-moz-placeholder           {opacity: 1; color: #ffffff;}
+input[type="search"]:-ms-input-placeholder      {opacity: 1; color: #ffffff;}
+
+.search-button {
+	order: -1;
+	width: 20px;
+	padding-right: 40px;
+    height: 42px;
+	background: transparent url("../img/icon-search.svg") no-repeat 17px 12px;
+	opacity: 0.3;
+	border: none;
+}
+
+.shop-controls {
+	display: block;
+	width: 450px;
 }
 
 .main-navigation {
 	display: block;
 	width: 940px;
+	max-height: 55px;
 }
 
 ul {
@@ -76,20 +110,21 @@ a {
 .main-navigation .site-navigation {
 	display: -webkit-flex;
 	display: flex;
+	justify-content: center;
 	padding-left: 0;
 	background-color: #32425c;
+	border-bottom: 5px solid #293448;
 }
 
 .main-navigation a {
 	display: block;
 	margin: 0;
-	padding: 20px 30px 18px 30px;
+	padding: 20px 30px 18px;
 	font-size: 17px;
 	line-height: 17px;
 	text-align: center;
 	color: #ffffff;
 	background-color: #32425c;
-	border-bottom: 5px solid #293448;
 }
 
 .main-navigation a:hover,
@@ -104,3 +139,15 @@ a {
 .main-navigation a:focus {
 	outline: none;
 }
+
+/*
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}*/

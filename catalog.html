@@ -10,7 +10,7 @@
   <body>
     <header class="page-header">
       <section class="header-top">
-        <a class="button button-logo" href="index.html">Техномарт</a>
+        <a class="button button-logo">Техномарт</a>
         <form class="search-form" action="#" method="get">
           <input class="search-input" type="search" name="search" placeholder="Поиск:">
           <button class="search-button" type="submit" aria-label="Button search"></button>
@@ -63,7 +63,7 @@
       </ul>
       <h1 class="page-title">Перфораторы</h1>
       <div class="catalog">
-        <aside class="filters">
+        <section class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <!-- Здесь будет форма -->
           <form action="https://echo.htmlacademy.ru" method="get">
@@ -72,46 +72,42 @@
             <!-- Фильтр по производителям -->
             <fieldset class="filter filter-brands">
               <legend class="filter-title">Производители:</legend>
-              <ul>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-bosh" name="brand-bosh" checked>
-                  <label class="filter-text" for="filter-bosh">Bosch</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-interskol" name="brand-interskol">
-                  <label class="filter-text" for="filter-interskol">Интерскол</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-makita" name="brand-makita">
-                  <label class="filter-text" for="filter-makita">Makita</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-dewalt" name="brand-dewalt" checked>
-                  <label class="filter-text" for="filter-dewalt">Dewalt</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-hitachi" name="brand-hitachi">
-                  <label class="filter-text" for="filter-hitachi">Hitachi</label>
-                </li>
-              </ul>
+              <p class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-bosh" name="brand-bosh" checked>
+                <label class="filter-text" for="filter-bosh">Bosch</label>
+              </p>
+              <p class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-interskol" name="brand-interskol">
+                <label class="filter-text" for="filter-interskol">Интерскол</label>
+              </p>
+              <p class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-makita" name="brand-makita">
+                <label class="filter-text" for="filter-makita">Makita</label>
+              </p>
+              <p class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-dewalt" name="brand-dewalt" checked>
+                <label class="filter-text" for="filter-dewalt">Dewalt</label>
+              </p>
+              <p class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-hitachi" name="brand-hitachi">
+                <label class="filter-text" for="filter-hitachi">Hitachi</label>
+              </p>
             </fieldset>
             <!-- Фильтр по питанию инструмента -->
             <fieldset class="filter filter-supply">
               <legend class="filter-title">Питание:</legend>
-              <ul>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-radio" type="radio" id="filter-battery" name="product-group" value="battery" checked>
-                  <label class="filter-text" for="filter-battery" >Аккумуляторные</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-radio" type="radio" id="filter-network" name="product-group" value="network">
-                  <label class="filter-text" for="filter-network">Сетевые</label>
-                </li>
-              </ul>
+              <p class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" id="filter-battery" name="product-group" value="battery" checked>
+                <label class="filter-text" for="filter-battery">Аккумуляторные</label>
+              </p>
+              <p class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" id="filter-network" name="product-group" value="network">
+                <label class="filter-text" for="filter-network">Сетевые</label>
+              </p>
             </fieldset>
             <button class="button filter-button" type="submit">Показать</button>
           </form>
-        </aside>
+        </section>
         <div class="catalog-content">
           <!-- Секция сортировки каталога -->
           <section class="catalog-sorting">
@@ -221,8 +217,8 @@
             </ul>
           </section>
           <ul class="pagination-list">
-            <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
-            <li class="pagination-item"><a>2</a></li>
+            <li class="pagination-item pagination-item-current"><a>1</a></li>
+            <li class="pagination-item"><a href="#">2</a></li>
             <li class="pagination-item"><a href="#">3</a></li>
             <li class="pagination-item next-page"><a href="#">Следующая</a></li>
           </ul>
@@ -243,7 +239,7 @@
     <footer class="main-footer">
       <section class="footer-top">
         <div class="footer-top-row">
-          <a class="button button-logo" href="index.html">Техномарт</a>
+          <a class="button button-logo">Техномарт</a>
           <ul class="footer-list-top">
             <li><a href="company.html">Компания</a></li>
             <li><a href="news.html">Новости</a></li>
@@ -254,7 +250,7 @@
         </div>
         <div class="footer-top-row">
           <p class="footer-contacts">
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
             +7 (812) 555-05-55
           </p>
           <ul class="footer-list-bottom">
@@ -267,7 +263,7 @@
       </section>
       <section class="footer-bottom">
         <p class="footer-copyright">
-          © 2010–2015 Компания «Техномарт»
+          © 2010–2015 Компания «Техномарт»<br>
           Все права защищены
         </p>
         <div class="footer-social">
@@ -289,7 +285,7 @@
         </p>
         <p class="footer-developer">
           <span>Разработано-</span>
-          <a class="button developer-button" href="https://htmlacademy.ru" target="_blank">htmlacademy.ru</a>
+          <a class="button developer-button" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
         </p>
       </section>
     </footer>
@@ -297,13 +293,12 @@
     <section class="modal modal-order">
       <h2 class="visually-hidden">Оформление товара</h2>
       <div class="modal-order-top">
-        <span class="model-icon">Иконка</span>
         <p>Товар добавлен в корзину!</p>
-        <span class="modal-close">x</span>
+        <button class="modal-close" type="button">Закрыть</button>
       </div>
       <div class="modal-order-bottom">
-        <a href="order.html" class="button order-button">Оформить заказ</a>
-        <a class="modal-cancel">Продолжить покупки</a>
+        <a class="button order-button" href="order.html">Оформить заказ</a>
+        <a class="modal-cancel" href="#">Продолжить покупки</a>
       </div>
     </section>
   </body>

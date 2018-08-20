@@ -10,7 +10,7 @@
   <body>
     <header class="page-header">
       <section class="header-top">
-        <a class="button button-logo" href="index.html">Техномарт</a>
+        <a class="button button-logo">Техномарт</a>
         <form class="search-form" action="#" method="get">
           <input class="search-input" type="search" name="search" placeholder="Поиск:">
           <button class="search-button" type="submit" aria-label="Button search"></button>
@@ -97,10 +97,10 @@
       </section>
 
       <section class="popular-products">
-        <div class="products-header">
+        <header class="products-header">
           <h2 class="section-title">Популярные товары:</h2>
           <a class="button products-button" href="#">Все популярные товары</a>
-        </div>
+        </header>
         <ul class="products-list">
           <li class="catalog-item">
             <img src="img/bosch-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
@@ -145,10 +145,10 @@
       </section>
 
       <section class="popular-brands">
-        <div class="brands-header">
+        <header class="brands-header">
           <h2 class="section-title">Популярные производители:</h2>
           <a class="button brands-button" href="#">Все производители</a>
-        </div>
+        </header>
         <ul class="brands-list">
           <li>
             <a href="https://www.bosch.ru/" target="_blank">
@@ -200,13 +200,19 @@
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
         <div class="advantages">
-          <div class="service-list-button">
-            <button class="buton tab-button delivery-button" type="button">Доставка</button>
-            <button class="buton tab-button warranty-button" type="button">Гарантия</button>
-            <button class="buton tab-button credit-button" type="button">Кредит</button>
-          </div>
-          <div class="slider-content">
-            <div class="slider-description slider-delivery">
+          <ul class="service-list-button">
+            <li>
+              <button class="buton tab-button delivery-button" type="button">Доставка</button>
+            </li>
+            <li>
+              <button class="buton tab-button warranty-button" type="button">Гарантия</button>
+            </li>
+            <li>
+              <button class="buton tab-button credit-button" type="button">Кредит</button>
+            </li>
+          </ul>
+          <ul class="service-list-content">
+            <li class="service-description service-delivery">
               <h3>Доставка</h3>
               <p>
                 Мы с удовольствием доставим ваш товар прямо
@@ -214,8 +220,8 @@
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш на этаж!
               </p>
-            </div>
-            <div class="slider-description slider-warranty">
+            </li>
+            <li class="service-description service-warranty">
               <h3>Гарантия</h3>
               <p>
                 Если купленный у нас товар поломается или заискрит,
@@ -224,16 +230,16 @@
                 сгоревший товар на новый.<br>
                 Дом уж восстановите как-нибудь сами.
               </p>
-            </div>
-            <div class="slider-description slider-credit">
+            </li>
+            <li class="service-description service-credit">
               <h3>Кредит</h3>
               <p>
                 Залезть в долговую яму стало проще!
                 Кредитные консультанты придут вам на помощь.
               </p>
-              <a class="button credit-button-item"  href="#">Отправить заявку</a>
-            </div>
-          </div>
+              <a class="button credit-button-item" href="#">Отправить заявку</a>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -272,7 +278,7 @@
     <footer class="main-footer">
       <section class="footer-top">
         <div class="footer-top-row">
-          <a class="button button-logo" href="index.html">Техномарт</a>
+          <a class="button button-logo">Техномарт</a>
           <ul class="footer-list-top">
             <li><a href="company.html">Компания</a></li>
             <li><a href="news.html">Новости</a></li>
@@ -283,7 +289,7 @@
         </div>
         <div class="footer-top-row">
           <p class="footer-contacts">
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
             +7 (812) 555-05-55
           </p>
           <ul class="footer-list-bottom">
@@ -296,7 +302,7 @@
       </section>
       <section class="footer-bottom">
         <p class="footer-copyright">
-          © 2010–2015 Компания «Техномарт»
+          © 2010–2015 Компания «Техномарт»<br>
           Все права защищены
         </p>
         <div class="footer-social">
@@ -318,7 +324,7 @@
         </p>
         <p class="footer-developer">
           <span>Разработано-</span>
-          <a class="button developer-button" href="https://htmlacademy.ru" target="_blank">htmlacademy.ru</a>
+          <a class="button developer-button" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
         </p>
       </section>
     </footer>
@@ -340,6 +346,7 @@
           <button class="button modal-button" type="submit">Отправить</button>
         </div>
       </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-map">
@@ -351,4 +358,5 @@
         <button class="modal-close" type="button">Закрыть</button>
       </div>
     </section>
+  </body>
 </html>

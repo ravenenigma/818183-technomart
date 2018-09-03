@@ -35,12 +35,21 @@
           </div>
           <ul class="user-navigation">
             <li>
-              <a class="user-loged" href="#">Равшан Джамшутович</a>
-              <a class="user-logout" href="#">Выйти</a>
+              <a class="user-loged" href="#">
+                <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
+                  <path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/>
+                </svg>
+                Равшан Джамшутович
+                <svg class="icon-logout" xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
+                  <g fill="#c5c5c5">
+                    <path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/>
+                    <path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/>
+                  </g>
+                </svg>
+              </a>
             </li>
             <li>
               <a class="user-orders" href="#">Мои заказы</a>
-              <span class="user-point">.</span>
             </li>
             <li>
               <a class="user-cabinet" href="#">Личный кабинет</a>
@@ -76,53 +85,60 @@
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <!-- Здесь будет форма -->
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-              <h3 class="filter-header-title"></h3>
+              <h3 class="filter-header-title">Фильтр:</h3>
               <!-- Фильтр по цене -->
               <fieldset class="filter-price">
                 <legend class="filter-title">Цена:</legend>
-                <div class="toggle-control">
-                  <div class="toggle-price"></div>
-                  <div class="toggle-price"></div>
+                <div class="rage-control">
+                  <div class="rage-scale"></div>
+                  <div class="rage-price low-rage"></div>
+                  <div class="rage-price high-rage"></div>
                 </div>
                 <div class="price-control">
-                  <input type="text" value="0">
-                  <input type="text" value="3000">
+                  <p>
+                    <input class="filter-low-price" type="text" id="low-price" name="low-price" value="0">
+                    <label class="label-low-price" for="low-price"></label>
+                  </p>
+                  <p>
+                    <input class="filter-high-price" type="text" id="high-price" name="high-price" value="3000">
+                    <label class="label-high-price" for="high-price"></label>
+                  </p>
                 </div>
               </fieldset>
               <!-- Фильтр по производителям -->
               <fieldset class="filter-brands">
-                <legend class="filter-legent">Производители:</legend>
-                <p class="filter-option">
+                <legend>Производители:</legend>
+                <p>
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-bosh" name="brand-bosh" checked>
-                  <label class="filter-text" for="filter-bosh">Bosch</label>
+                  <label for="filter-bosh">Bosch</label>
                 </p>
-                <p class="filter-option">
+                <p>
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-interskol" name="brand-interskol">
-                  <label class="filter-text" for="filter-interskol">Интерскол</label>
+                  <label for="filter-interskol">Интерскол</label>
                 </p>
-                <p class="filter-option">
+                <p>
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-makita" name="brand-makita">
-                  <label class="filter-text" for="filter-makita">Makita</label>
+                  <label for="filter-makita">Makita</label>
                 </p>
-                <p class="filter-option">
+                <p>
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-dewalt" name="brand-dewalt" checked>
-                  <label class="filter-text" for="filter-dewalt">Dewalt</label>
+                  <label for="filter-dewalt">Dewalt</label>
                 </p>
-                <p class="filter-option">
+                <p>
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-hitachi" name="brand-hitachi">
-                  <label class="filter-text" for="filter-hitachi">Hitachi</label>
+                  <label for="filter-hitachi">Hitachi</label>
                 </p>
               </fieldset>
               <!-- Фильтр по питанию инструмента -->
               <fieldset class="filter-supply">
-                <legend class="filter-legent">Питание:</legend>
-                <p class="filter-option">
+                <legend>Питание:</legend>
+                <p>
                   <input class="visually-hidden filter-input filter-input-radio" type="radio" id="filter-battery" name="product-group" value="battery" checked>
-                  <label class="filter-text" for="filter-battery">Аккумуляторные</label>
+                  <label for="filter-battery">Аккумуляторные</label>
                 </p>
-                <p class="filter-option">
+                <p>
                   <input class="visually-hidden filter-input filter-input-radio" type="radio" id="filter-network" name="product-group" value="network">
-                  <label class="filter-text" for="filter-network">Сетевые</label>
+                  <label for="filter-network">Сетевые</label>
                 </p>
               </fieldset>
               <button class="button filter-button" type="submit">Показать</button>
@@ -135,9 +151,9 @@
               <span>Сортировка:</span>
               <!-- Сортировка каталога по параметрам и цене -->
               <div class="sorting-list">
-                <a class="sorting-price" href="#">По цене</a>
-                <a class="sorting-type" href="#">По типу</a>
-                <a class="sorting-functional" href="#">По функционалу</a>
+                <a class="sorting-button sorting-price" href="#">По цене</a>
+                <a class="sorting-button sorting-type" href="#">По типу</a>
+                <a class="sorting-button sorting-functional" href="#">По функционалу</a>
               </div>
               <!-- Сортировка каталога по ? -->
               <div class="sorting-direction">
@@ -172,7 +188,8 @@
                   <span class="product-discount">30500 р.</span>
                   <a class="button price-button" href="#">25500 р.</a>
                 </li>
-                <li class="catalog-item mark-new">
+                <li class="catalog-item">
+                  <span class="badge">new</span>
                   <div class="product-action">
                     <a class="button basket-button" href="#">Купить</a>
                     <a class="button bookmarks-button" href="#">В закладки</a>
@@ -197,6 +214,7 @@
                   <a class="button price-button" href="#">15500 р.</a>
                 </li>
                 <li class="catalog-item">
+                  <span class="badge">new</span>
                   <div class="product-action">
                     <a class="button basket-button" href="#">Купить</a>
                     <a class="button bookmarks-button" href="#">В закладки</a>
@@ -208,7 +226,7 @@
                   <span class="product-discount">30500 р.</span>
                   <a class="button price-button" href="#">25500 р.</a>
                 </li>
-                <li class="catalog-item mark-new">
+                <li class="catalog-item">
                   <div class="product-action">
                     <a class="button basket-button" href="#">Купить</a>
                     <a class="button bookmarks-button" href="#">В закладки</a>
@@ -221,6 +239,7 @@
                   <a class="button price-button" href="#">12500 р.</a>
                 </li>
                 <li class="catalog-item">
+                  <span class="badge">new</span>
                   <div class="product-action">
                     <a class="button basket-button" href="#">Купить</a>
                     <a class="button bookmarks-button" href="#">В закладки</a>
@@ -244,7 +263,7 @@
                   <span class="product-discount">30500 р.</span>
                   <a class="button price-button" href="#">25500 р.</a>
                 </li>
-                <li class="catalog-item mark-new">
+                <li class="catalog-item">
                   <div class="product-action">
                     <a class="button basket-button" href="#">Купить</a>
                     <a class="button bookmarks-button" href="#">В закладки</a>
@@ -344,7 +363,7 @@
       </div>
     </footer>
 
-    <section class="modal modal-order">
+    <section class="visually-hidden modal modal-order">
       <h2 class="visually-hidden">Оформление товара</h2>
       <div class="modal-order-top">
         <p>Товар добавлен в корзину!</p>

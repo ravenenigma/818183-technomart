@@ -36,9 +36,9 @@
           <ul class="user-navigation">
             <li>
               <a class="login-link" href="#">
-                <svg class="icon-sign-in" width="20" height="17" viewBox="0 0 24 28">
-                  <title>sign-in</title>
-                  <path d="M18.5 14c0 0.266-0.109 0.516-0.297 0.703l-8.5 8.5c-0.187 0.187-0.438 0.297-0.703 0.297-0.547 0-1-0.453-1-1v-4.5h-7c-0.547 0-1-0.453-1-1v-6c0-0.547 0.453-1 1-1h7v-4.5c0-0.547 0.453-1 1-1 0.266 0 0.516 0.109 0.703 0.297l8.5 8.5c0.187 0.187 0.297 0.438 0.297 0.703zM24 8.5v11c0 2.484-2.016 4.5-4.5 4.5h-5c-0.266 0-0.5-0.234-0.5-0.5 0-0.438-0.203-1.5 0.5-1.5h5c1.375 0 2.5-1.125 2.5-2.5v-11c0-1.375-1.125-2.5-2.5-2.5h-4.5c-0.391 0-1 0.078-1-0.5 0-0.438-0.203-1.5 0.5-1.5h5c2.484 0 4.5 2.016 4.5 4.5z"></path>
+                <svg class="icon-sign-in" xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                  <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"/>
+                  <path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/>
                 </svg>
                 Войти
               </a>
@@ -68,7 +68,8 @@
         <section class="offers">
           <h2 class="visually-hidden">Наши предложения</h2>
           <div class="offers-row">
-            <div class="offers-box materials mark-new">
+            <div class="offers-box materials">
+              <span class="badge">new</span>
               <h3 class="offer-box-title">Материалы</h3>
               <a class="button offers-button" href="#">На любой вкус</a>
             </div>
@@ -83,35 +84,33 @@
           </div>
           <div class="offers-row">
             <div class="offers-col">
-              <div class="sliders">
+              <div class="slider-content">
                 <button class="button slider-button slider-button-back visually-hidden" type="button">Назад</button>
                 <button class="button slider-button slider-button-next visually-hidden" type="button">Вперед</button>
-                <div class="slider-controls">
-                  <input class="radio-1" type="radio" id="radio-1" name="toggle" checked>
-                  <input class="radio-2" type="radio" id="radio-2" name="toggle">
-                  <label for="radio-1"></label>
-                  <label for="radio-2"></label>
-                </div>
-                
-                  <div class="sliders-content">
-                    <div class="slider-content">
-                      <header class="header-slide">
-                        <h3>Перфораторы</h3>
-                        <p>Настоящие мужские игрушки</p>
-                      </header>
-                      <img src="img/slider-img-01.jpg" width="620" height="226" alt="Перфораторы для настоящих мужчин">
-                      <a class="button slider-button-item" href="catalog.html">Открыть каталог</a>
+                <input class="visually-hidden product-1" type="radio" id="product-1" name="toggle" checked>
+                <input class="visually-hidden product-2" type="radio" id="product-2" name="toggle">
+                <ul class="sliders-list">
+                  <li class="slider-item offer-slide">
+                    <div class="header-slide">
+                      <h3 class="slide-title">Перфораторы</h3>
+                      <p>Настоящие мужские игрушки</p>
                     </div>
-                    <div class="slider-content">
-                      <header class="header-slide">
-                        <h3>Дрели</h3>
-                        <p>Соседям на радость!</p>
-                      </header>
-                      <img src="img/slider-img-02.jpg" width="620" height="226" alt="Дрели на радость мужчинам">
-                      <a class="button slider-button-item" href="catalog.html">Открыть каталог</a>
+                    <img src="img/slider-img-01.jpg" width="620" height="266" alt="Перфораторы для настоящих мужчин">
+                    <a class="button slider-item-button" href="catalog.html">Открыть каталог</a>
+                  </li>
+                  <li class="slider-item offer-slide">
+                    <div class="header-slide">
+                      <h3 class="slide-title">Дрели</h3>
+                      <p>Соседям на радость!</p>
                     </div>
-                  </div>
-                
+                    <img src="img/slider-img-02.jpg" width="620" height="266" alt="Дрели на радость мужчинам">
+                    <a class="button slider-item-button" href="catalog.html">Открыть каталог</a>
+                  </li>
+                  <li class="slider-controls">
+                    <label class="btn-1" for="product-1"></label>
+                    <label class="btn-2" for="product-2"></label>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="offers-col">
@@ -169,7 +168,8 @@
               <span class="product-discount">30500 р.</span>
               <a class="button price-button" href="#">25500 р.</a>
             </li>
-            <li class="catalog-item mark-new">
+            <li class="catalog-item">
+              <span class="badge">new</span>
               <div class="product-action">
                 <a class="button basket-button" href="#">Купить</a>
                 <a class="button bookmarks-button" href="#">В закладки</a>
@@ -238,19 +238,22 @@
         <div class="container">
           <h2 class="service-title">Сервисы</h2>
           <p>
-            Хороший интернет-магазин отличается от плохого не только ценами!
+            Хороший интернет-магазин отличается от плохого не только ценами<br>
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-          <div class="advantages">
+          <div class="index-columns">
             <ul class="service-list-button">
-              <li>
-                <button class="buton tab-button delivery-button" type="button">Доставка</button>
+              <li class="service-item-button">
+                <input class="visually-hidden tab-button delivery-button" type="radio" id="delivery-button" name="button" checked>
+                <label for="delivery-button">Доставка</label>
               </li>
-              <li>
-                <button class="buton tab-button warranty-button" type="button">Гарантия</button>
+              <li class="service-item-button">
+                <input class="visually-hidden tab-button warranty-button" type="radio" id="warranty-button" name="button">
+                <label for="warranty-button">Гарантия</label>
               </li>
-              <li>
-                <button class="buton tab-button credit-button" type="button">Кредит</button>
+              <li class="service-item-button">
+                <input class="visually-hidden tab-button credit-button" type="radio" id="credit-button" name="button">
+                <label for="credit-button">Кредит</label>
               </li>
             </ul>
             <ul class="service-list-content">
@@ -300,11 +303,11 @@
               Техномарт работает со многими транспортными компаниями:
             </p>
             <ul class="company-list-info">
-              <li>Деловые линии</li>
-              <li>Автотрейдинг</li>
-              <li>ЖелДорЭкспедиция</li>
+              <li class="company-item-info">Деловые линии</li>
+              <li class="company-item-info">Автотрейдинг</li>
+              <li class="company-item-info">ЖелДорЭкспедиция</li>
             </ul>
-            <a class="button company-button" href="company.html">Подробнее о Компании</a>
+            <a class="button company-button" href="#">Подробнее о Компании</a>
           </section>
           <section class="contacts">
             <h2 class="contacts-title">Контакты</h2>
@@ -312,10 +315,7 @@
               Вы можете забрать товар сами,<br>
               заехав в наш офис.
             </p>
-            <a class="contacts-map" href="#">
-              <img src="img/map-preview.png" alt="«Техномарт» на карте" width="300" height="158">
-            </a>
-            <!-- Здесь будет iframe -->
+            <a class="contacts-map" href="https://yandex.ru/maps/?um=constructor%3Aaf55b50267eb16d60acf0a604c25027cd5f394f5025979bd8cef55cc0fd9e430&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aaf55b50267eb16d60acf0a604c25027cd5f394f5025979bd8cef55cc0fd9e430&amp;width=300&amp;height=158&amp;lang=ru_RU" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" style="border: 0;" /></a>
             <a class="button contacts-button" href="#">Заблудились? Напишите нам!</a>
           </section>
         </div>
@@ -385,27 +385,29 @@
       </div>
     </footer>
 
-    <section class="modal modal-contacts">
+    <section class="visually-hidden modal modal-contacts">
       <div class="modal-substrate"></div> <!-- Подложка нужна для закрытия модалки, при нажатии по пустой области с помощью js -->
       <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="modal-half-width">
+        <p class="modal-half-width">
           <label for="name-field">Ваше имя:</label>
           <input type="text" id="name-field" name="name" placeholder="Имя Фамилия" required>
+        </p>
+        <p>
           <label for="email-field">Ваш e-mail:</label>
           <input type="email" id="email-field" name="email" placeholder="email@example.com" required>
-        </div>
-        <div class="modal-half-width">
+        </p>
+        <p>
           <label for="letter-field">Текст письма:</label>
           <textarea class="contact-form-item text-field" id="letter-field" name="text" cols="61" rows="5" placeholder="В свободной форме"></textarea>
-        </div>
-        <div class="modal-half-width modal-bottom">
+        </p>
+        <div class="modal-bottom">
           <button class="button modal-button" type="submit">Отправить</button>
         </div>
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
 
-    <section class="modal modal-map">
+    <section class="visually-hidden modal modal-map">
       <div class="modal-substrate"></div> <!-- Подложка нужна для закрытия модалки, при нажатии по пустой области с помощью js -->
       <div class="modal-body">
         <p>

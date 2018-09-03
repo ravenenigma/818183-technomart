@@ -315,7 +315,7 @@
               Вы можете забрать товар сами,<br>
               заехав в наш офис.
             </p>
-            <a class="contacts-map" href="https://yandex.ru/maps/?um=constructor%3Aaf55b50267eb16d60acf0a604c25027cd5f394f5025979bd8cef55cc0fd9e430&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aaf55b50267eb16d60acf0a604c25027cd5f394f5025979bd8cef55cc0fd9e430&amp;width=300&amp;height=158&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+            <a class="contacts-map" href="https://yandex.ru/maps/?um=constructor%3Aaf55b50267eb16d60acf0a604c25027cd5f394f5025979bd8cef55cc0fd9e430&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aaf55b50267eb16d60acf0a604c25027cd5f394f5025979bd8cef55cc0fd9e430&amp;width=300&amp;height=158&amp;lang=ru_RU" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" style="border: 0;" /></a>
             <a class="button contacts-button" href="#">Заблудились? Напишите нам!</a>
           </section>
         </div>
@@ -385,20 +385,22 @@
       </div>
     </footer>
 
-    <section class="visually-hidden modal modal-contacts">
+    <section class="modal modal-contacts">
       <div class="modal-substrate"></div> <!-- Подложка нужна для закрытия модалки, при нажатии по пустой области с помощью js -->
       <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="modal-half-width">
+        <p class="modal-half-width">
           <label for="name-field">Ваше имя:</label>
           <input type="text" id="name-field" name="name" placeholder="Имя Фамилия" required>
+        </p>
+        <p>
           <label for="email-field">Ваш e-mail:</label>
           <input type="email" id="email-field" name="email" placeholder="email@example.com" required>
-        </div>
-        <div class="modal-half-width">
+        </p>
+        <p>
           <label for="letter-field">Текст письма:</label>
           <textarea class="contact-form-item text-field" id="letter-field" name="text" cols="61" rows="5" placeholder="В свободной форме"></textarea>
-        </div>
-        <div class="modal-half-width modal-bottom">
+        </p>
+        <div class="modal-bottom">
           <button class="button modal-button" type="submit">Отправить</button>
         </div>
       </form>

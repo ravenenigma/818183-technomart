@@ -64,27 +64,18 @@ input[type="radio"].visually-hidden {
 	padding-left: 10px;
 }
 
-.new-flag {
+.badge {
 	display: block;
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 60px;
-	height: 60px;
-	background-image: linear-gradient(45deg, transparent 50%, #ee3643 50%, #ee3643 83%, transparent 83%);
-}
-
-.new-flag::before {
-	content: "New";
-	display: block;
-	margin-top: -2px;
-	margin-bottom: 0;
-	padding-right: 4px;
-	font-size: 17px;
-	text-transform: lowercase;
-	text-align: right;
+	width: 100px;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
 	color: #ffffff;
-	transform: rotate(45deg);
+	background-color: #ee3643;
+	transform: translate(50%, -50%) translate(-20px, 20px) rotate(45deg);
 }
 
 /* ---------------------------------------- */
@@ -553,6 +544,7 @@ input[type="radio"].visually-hidden {
 	width: 300px;
 	box-sizing: border-box;
 	background-color: #293448;
+	overflow: hidden;
 }
 
 .offer-box-title {
@@ -772,6 +764,7 @@ input[type="radio"].visually-hidden {
 	margin-left: 20px;
 	text-align: center;
 	border: 1px solid #eaeaea;
+	overflow: hidden;
 }
 
 .product-figure {

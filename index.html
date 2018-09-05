@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
   </head>
@@ -20,8 +20,8 @@
               <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zM26 26c0 1.094-0.906 2-2 2-0.531 0-1.047-0.219-1.406-0.594l-5.359-5.344c-1.828 1.266-4.016 1.937-6.234 1.937-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-0.672 4.406-1.937 6.234l5.359 5.359c0.359 0.359 0.578 0.875 0.578 1.406z"></path>
             </svg>
           </form>
-          <a class="shop-bookmarks icon-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
-          <a class="shop-basket icon-basket" href="#">Корзина: <span class="basket-count">0</span></a>
+          <a class="shop-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
+          <a class="shop-basket" href="#">Корзина: <span class="basket-count">0</span></a>
           <a class="shop-ordering" href="#">Оформить заказ</a>
         </div>
       </section>
@@ -315,8 +315,10 @@
               Вы можете забрать товар сами,<br>
               заехав в наш офис.
             </p>
-            <a class="contacts-map" href="https://yandex.ru/maps/?um=constructor%3Aaf55b50267eb16d60acf0a604c25027cd5f394f5025979bd8cef55cc0fd9e430&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aaf55b50267eb16d60acf0a604c25027cd5f394f5025979bd8cef55cc0fd9e430&amp;width=300&amp;height=158&amp;lang=ru_RU" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" style="border: 0;" /></a>
-            <a class="button contacts-button" href="#">Заблудились? Напишите нам!</a>
+            <a class="contacts-button-map">
+              <img src="img/map-preview.png" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+            </a>
+            <a class="button contacts-button" href="contacts.html">Заблудились? Напишите нам!</a>
           </section>
         </div>
       </div>
@@ -385,36 +387,39 @@
       </div>
     </footer>
 
-    <section class="visually-hidden modal modal-contacts">
+    <section class="modal modal-contacts">
       <div class="modal-substrate"></div> <!-- Подложка нужна для закрытия модалки, при нажатии по пустой области с помощью js -->
-      <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="modal-half-width">
-          <label for="name-field">Ваше имя:</label>
-          <input type="text" id="name-field" name="name" placeholder="Имя Фамилия" required>
-        </p>
-        <p>
-          <label for="email-field">Ваш e-mail:</label>
-          <input type="email" id="email-field" name="email" placeholder="email@example.com" required>
-        </p>
-        <p>
-          <label for="letter-field">Текст письма:</label>
-          <textarea class="contact-form-item text-field" id="letter-field" name="text" cols="61" rows="5" placeholder="В свободной форме"></textarea>
-        </p>
-        <div class="modal-bottom">
+      <form class="contacts-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="modal-contact-top">
+          <p class="form-option">
+            <label for="name-field">Ваше имя:</label>
+            <input type="text" id="name-field" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p class="form-option">
+            <label for="email-field">Ваш e-mail:</label>
+            <input type="email" id="email-field" name="email" placeholder="email@example.com">
+          </p>
+          <p class="form-option">
+            <label for="letter-field">Текст письма:</label>
+            <textarea class="text-area" id="letter-field" name="text-letter" placeholder="В свободной форме"></textarea>
+          </p>
+        </div>
+        <div class="modal-contact-bottom">
           <button class="button modal-button" type="submit">Отправить</button>
         </div>
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
 
-    <section class="visually-hidden modal modal-map">
+    <section class="modal modal-map">
       <div class="modal-substrate"></div> <!-- Подложка нужна для закрытия модалки, при нажатии по пустой области с помощью js -->
-      <div class="modal-body">
-        <p>
-          <img src="img/map-preview.png" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-        </p>
-        <button class="modal-close" type="button">Закрыть</button>
-      </div>
+      <iframe src="https://yandex.ru/map-widget/v1/-/CBBUjCG7HD" width="940" height="446" frameborder="1" allowfullscreen="true"></iframe>
+      <p>
+        <img src="img/map.jpg" width="1200" height="779" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      </p>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

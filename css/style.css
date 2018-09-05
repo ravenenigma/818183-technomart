@@ -635,7 +635,6 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-item {
-	width: 100%;
 	max-height: 266px;
 	transition: transform 0.8s ease;
 }
@@ -1372,7 +1371,7 @@ input[type="radio"].visually-hidden {
 	border-radius: 50%;
 	box-shadow: 0px 3px 1px -1px #cccccc;
 	cursor: pointer;
-	z-index: 100;
+	z-index: 1;
 }
 
 .low-rage {
@@ -2004,6 +2003,7 @@ input[type="radio"].visually-hidden {
 	display: none;
 	color: #000000;
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+	overflow: hidden;
 }
 
 .modal-show {
@@ -2149,6 +2149,16 @@ input[type="radio"].visually-hidden {
 	font-family: "PT Sans", "Verdana", sans-serif;
 }
 
+.continue-button {
+	padding-top: 9px;
+	padding-left: 43px;
+	padding-right: 46px;
+	padding-bottom: 11px;
+	color: #000000;
+	background-color: #ffffff;
+	border: none;
+}
+
 .modal-contact-bottom {
 	padding-top: 37px;
 	padding-left: 80px;
@@ -2171,7 +2181,6 @@ input[type="radio"].visually-hidden {
 	margin-left: -470px;
 	width: 940px;
 	height: 446px;
-	overflow: hidden;
 }
 
 .modal-map p {
@@ -2196,10 +2205,12 @@ input[type="radio"].visually-hidden {
 .modal-order {
 	top: 50%;
 	left: 50%;
+	margin-top: -145px;
 	margin-left: -310px;
 	width: 620px;
 	background-color: #ffffff;
 	border-top: 7px solid #ff5257;
+	z-index: 2;
 }
 
 .modal-order-top {
@@ -2237,15 +2248,5 @@ input[type="radio"].visually-hidden {
 	padding-left: 58px;
 	padding-right: 62px;
 	padding-bottom: 11px;
-	border: none;
-}
-
-.continue-button {
-	padding-top: 9px;
-	padding-left: 43px;
-	padding-right: 46px;
-	padding-bottom: 11px;
-	color: #000000;
-	background-color: #ffffff;
 	border: none;
 }

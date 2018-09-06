@@ -85,12 +85,8 @@
           <div class="offers-row">
             <div class="offers-col">
               <div class="slider-content">
-                <button class="button slider-button slider-button-back visually-hidden" type="button">Назад</button>
-                <button class="button slider-button slider-button-next visually-hidden" type="button">Вперед</button>
-                <input class="visually-hidden product-1" type="radio" id="product-1" name="toggle" checked>
-                <input class="visually-hidden product-2" type="radio" id="product-2" name="toggle">
                 <ul class="sliders-list">
-                  <li class="slider-item offer-slide">
+                  <li class="slider-item slide-showing">
                     <div class="header-slide">
                       <h3 class="slide-title">Перфораторы</h3>
                       <p>Настоящие мужские игрушки</p>
@@ -98,7 +94,7 @@
                     <img src="img/slider-img-01.jpg" width="620" height="266" alt="Перфораторы для настоящих мужчин">
                     <a class="button slider-item-button" href="catalog.html">Открыть каталог</a>
                   </li>
-                  <li class="slider-item offer-slide">
+                  <li class="slider-item">
                     <div class="header-slide">
                       <h3 class="slide-title">Дрели</h3>
                       <p>Соседям на радость!</p>
@@ -106,11 +102,13 @@
                     <img src="img/slider-img-02.jpg" width="620" height="266" alt="Дрели на радость мужчинам">
                     <a class="button slider-item-button" href="catalog.html">Открыть каталог</a>
                   </li>
-                  <li class="slider-controls">
-                    <label class="btn-1" for="product-1"></label>
-                    <label class="btn-2" for="product-2"></label>
-                  </li>
                 </ul>
+                <button class="controls-button previous-button" id="previous"></button>
+                <button class="controls-button next-button" id="next"></button>
+                <div class="slides-control">
+                  <span class="dot-button active-dot"></span>
+                  <span class="dot-button"></span>
+                </div>
               </div>
             </div>
             <div class="offers-col">
@@ -242,20 +240,14 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
           <div class="index-columns">
-            <ul class="service-list-button">
-              <li class="service-item-button">
-                <input class="visually-hidden tab-button delivery-button" type="radio" id="delivery-button" name="button" checked>
-                <label for="delivery-button">Доставка</label>
-              </li>
-              <li class="service-item-button">
-                <input class="visually-hidden tab-button warranty-button" type="radio" id="warranty-button" name="button">
-                <label for="warranty-button">Гарантия</label>
-              </li>
-              <li class="service-item-button">
-                <input class="visually-hidden tab-button credit-button" type="radio" id="credit-button" name="button">
-                <label for="credit-button">Кредит</label>
-              </li>
-            </ul>
+            <input class="visually-hidden delivery-button" type="radio" id="delivery-button" name="button" checked>
+            <input class="visually-hidden warranty-button" type="radio" id="warranty-button" name="button">
+            <input class="visually-hidden credit-button" type="radio" id="credit-button" name="button">
+            <div class="service-slider-controls">
+              <label class="control-delivery" for="delivery-button">Доставка</label>
+              <label class="control-warranty" for="warranty-button">Гарантия</label>
+              <label class="control-credit" for="credit-button">Кредит</label>
+            </div>
             <ul class="service-list-content">
               <li class="service-description service-delivery">
                 <h3>Доставка</h3>
@@ -282,44 +274,46 @@
                   Залезть в долговую яму стало проще!
                   Кредитные консультанты придут вам на помощь.
                 </p>
-                <a class="button credit-button-item" href="javascript:void(0)">Отправить заявку</a>
+                <a class="button credit-item-button" href="javascript:void(0)">Отправить заявку</a>
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <div class="container">
-        <div class="index-columns">
-          <section class="company">
-            <h2 class="company-title">Компания «Техномарт»</h2>
-            <p>
-              Настоящий мужской шоппинг начинается здесь!
-              Огромный выбор товаров для ремонта и строительства
-              не оставит равнодушными любителей сэкномить на гастарбайтерах.
-            </p>
-            <p>
-              Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-              Техномарт работает со многими транспортными компаниями:
-            </p>
-            <ul class="company-list-info">
-              <li class="company-item-info">Деловые линии</li>
-              <li class="company-item-info">Автотрейдинг</li>
-              <li class="company-item-info">ЖелДорЭкспедиция</li>
-            </ul>
-            <a class="button company-button" href="javascript:void(0)">Подробнее о Компании</a>
-          </section>
-          <section class="contacts">
-            <h2 class="contacts-title">Контакты</h2>
-            <p>
-              Вы можете забрать товар сами,<br>
-              заехав в наш офис.
-            </p>
-            <a class="contacts-button-map">
-              <img src="img/map-preview.png" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-            </a>
-            <a class="button contacts-button" href="contacts.html">Заблудились? Напишите нам!</a>
-          </section>
+      <div class="about-company">
+        <div class="container">
+          <div class="index-columns">
+            <section class="company">
+              <h2 class="company-title">Компания «Техномарт»</h2>
+              <p>
+                Настоящий мужской шоппинг начинается здесь!
+                Огромный выбор товаров для ремонта и строительства
+                не оставит равнодушными любителей сэкномить на гастарбайтерах.
+              </p>
+              <p>
+                Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+                Техномарт работает со многими транспортными компаниями:
+              </p>
+              <ul class="company-list-info">
+                <li class="company-item-info">Деловые линии</li>
+                <li class="company-item-info">Автотрейдинг</li>
+                <li class="company-item-info">ЖелДорЭкспедиция</li>
+              </ul>
+              <a class="button company-button" href="javascript:void(0)">Подробнее о Компании</a>
+            </section>
+            <section class="contacts">
+              <h2 class="contacts-title">Контакты</h2>
+              <p>
+                Вы можете забрать товар сами,<br>
+                заехав в наш офис.
+              </p>
+              <a class="contacts-button-map">
+                <img src="img/map-preview.png" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+              </a>
+              <a class="button contacts-button" href="contacts.html">Заблудились? Напишите нам!</a>
+            </section>
+          </div>
         </div>
       </div>
     </main>

@@ -125,7 +125,6 @@ input[type="radio"].visually-hidden {
 
 .search-input {
 	width: 270px;
-	padding-left: 5px;
 	font-size: 17px;
 	line-height: 18px;
 	color: #ffffff;
@@ -140,9 +139,11 @@ input[type="radio"].visually-hidden {
 .search-input:-ms-input-placeholder			{color: #ffffff;}
 
 .icon-search {
+	order: -1;
 	padding-left: 15px;
 	padding-top: 10px;
 	padding-right: 13px;
+	padding-bottom: 13px;
 	stroke: rgba(255, 255, 255, 0.3);
 	fill: #ffffff;
 	fill-opacity: 0.3;
@@ -163,6 +164,7 @@ input[type="radio"].visually-hidden {
 
 .search-input:focus ~ svg,
 .search-input:active ~ svg {
+	background-color: #ffffff;
 	stroke: #ee3643;
 	fill: #ee3643;
 	fill-opacity: 1;
@@ -531,6 +533,27 @@ input[type="radio"].visually-hidden {
 /* 				Section Offers				*/
 /* ---------------------------------------- */
 
+@keyframes vanishIn {
+	0% {
+		opacity: 0;
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		-webkit-transform: scale(2, 2);
+		transform: scale(2, 2);
+		-webkit-filter: blur(90px);
+		filter: blur(90px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		-webkit-transform: scale(1, 1);
+		transform: scale(1, 1);
+		-webkit-filter: blur(0px);
+		filter: blur(0px);
+	}
+}
+
 .offers {
 	padding-top: 60px;
 	padding-bottom: 52px;
@@ -620,24 +643,40 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-content {
+	position: relative;
 	width: 620px;
+	height: 266px;
 	margin-left: 20px;
 }
 
 .sliders-list {
-	display: flex;
 	position: relative;
+	width: 620px;
+	height: 266px;
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-left: 0;
 	list-style: none;
-	overflow: hidden;
 }
 
 .slider-item {
+	position: absolute;
+	box-sizing: border-box;
+	left: 0px;
+	top: 0px;
 	width: 100%;
-	max-height: 266px;
-	transition: transform 0.8s ease;
+	height: 100%;
+	opacity: 0;
+}
+
+.slider-item img {
+	width: 100%;
+}
+
+.slide-showing {
+	opacity: 1;
+	z-index: 1;
+	animation: vanishIn 0.4s;
 }
 
 .header-slide {
@@ -648,18 +687,38 @@ input[type="radio"].visually-hidden {
 	padding-left: 25px;
 }
 
-.slider-item img {
-	width: 620px;
+.controls-button {
+	position: absolute;
+	top: 113px;
+	width: 22px;
+	height: 40px;
+	background-color: transparent;
+	border: none;
+	z-index: 2;
 }
 
-.slider-controls {
+.previous-button {
+	left: 5px;
+	background-image: url(../img/icon-left.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.next-button {
+	right: 5px;
+	background-image: url(../img/icon-right.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.slides-control {
 	position: absolute;
-	text-align: center;
 	left: 47%;
 	bottom: 28px;
+	z-index: 2;
 }
 
-.slider-controls label {
+.dot-button {
 	display: inline-block;
 	width: 8px;
 	height: 8px;
@@ -672,6 +731,14 @@ input[type="radio"].visually-hidden {
 	cursor: pointer;
 }
 
+.dot-button:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.active-dot {
+	background-color: #ee3643;
+}
+
 .slider-item-button {
 	position: absolute;
 	left: 25px;
@@ -680,27 +747,6 @@ input[type="radio"].visually-hidden {
 	padding-right: 48px;
 	padding-bottom: 10px;
 	padding-left: 48px;
-}
-
-.product-1:checked ~ .sliders-list label[for="product-1"],
-.product-2:checked ~ .sliders-list label[for="product-2"] {
-	background-color: #ee3643;
-}
-
-.product-1:checked ~ .sliders-list .offer-slide {
-	transform: translateX(0);
-}
-
-.product-2:checked ~ .sliders-list .offer-slide {
-	transform: translateX(-620px);
-}
-
-.product-1:checked ~ .sliders-list .header-slide {
-	transform: translateX(0);
-}
-
-.product-2:checked ~ .sliders-list .header-slide {
-	transform: translateX(0px);
 }
 
 .slider-content h3 {
@@ -920,7 +966,7 @@ input[type="radio"].visually-hidden {
 /* ---------------------------------------- */
 
 .popular-brands {
-	padding-bottom: 20px;
+	padding-bottom: 85px;
 }
 
 .brands-list {
@@ -964,14 +1010,19 @@ input[type="radio"].visually-hidden {
 	margin-top: 20px;
 	margin-left: 20px;
 	width: 218px;
-	height: 143px;
+	line-height: 145px;
+	text-align: center;
 	border: 1px solid #eaeaea;
 	outline: none;
 }
 
 .brands-list a {
-	align-self: center;
-	margin: auto;
+	width: 100%;
+	height: 100%;
+}
+
+.brands-item img {
+	vertical-align: middle;
 }
 
 .brands-item:hover,
@@ -988,9 +1039,32 @@ input[type="radio"].visually-hidden {
 /* 				Section Service 			*/
 /* ---------------------------------------- */
 
+@keyframes boingInUp {
+	0% {
+		opacity: 0;
+		transform-origin: 50% 0%;
+		transform: perspective(800px) rotateX(-90deg);
+	}
+	50% {
+		opacity: 1;
+		transform-origin: 50% 0%;
+		transform: perspective(800px) rotateX(50deg);
+	}
+	100% {
+		opacity: 1;
+		transform-origin: 50% 0%;
+		transform: perspective(800px) rotateX(0deg);
+	}
+}
+
+.index-columns {
+	display: flex;
+	justify-content: space-between;
+	color: #000000;
+}
+
 .service {
 	padding-top: 65px;
-	padding-bottom: 54px;
 	color: #000000;
 	background-color: #f5f8fa;
 }
@@ -1005,7 +1079,7 @@ input[type="radio"].visually-hidden {
 
 .service p {
 	margin-top: 0;
-	margin-bottom: 0;
+	margin-bottom: 70px;
 	font-family: "PT Sans", "Verdana", sans-serif;
 }
 
@@ -1016,7 +1090,6 @@ input[type="radio"].visually-hidden {
 	color: #000000;
 }
 
-.service-list-button,
 .service-list-content {
 	margin-top: 0;
 	margin-bottom: 0;
@@ -1024,33 +1097,40 @@ input[type="radio"].visually-hidden {
 	list-style: none;
 }
 
-.service-list-content p {
-	width: 380px;
-}
-
-.service-list-button {
+.service-slider-controls {
 	position: relative;
-	margin-right: 20px;
-	padding-right: 60px;
-}
-
-.service-item-button {
 	font-size: 21px;
 	line-height: 30px;
 	font-weight: bold;
-	color: #ffffff;
-	background-color: #32425c;
 }
 
-.service-item-button label {
+.service-slider-controls label {
 	display: block;
-	position: relative;
 	padding-top: 15px;
 	padding-left: 22px;
 	padding-right: 140px;
 	padding-bottom: 15px;
+	color: #ffffff;
+	background-color: #32425c;
 	box-shadow: inset 0 1px 0 0 #405069;
 	border-bottom: 1px solid #293449;
+	cursor: pointer;
+}
+
+.service-list-content {
+	position: relative;
+	width: 620px;
+	min-height: 284px;
+}
+
+.service-description {
+	display: none;
+}
+
+.service-list-content p {
+	box-sizing: border-box;
+	padding-right: 25px;
+	width: 300px;
 }
 
 .service-description h3 {
@@ -1061,29 +1141,47 @@ input[type="radio"].visually-hidden {
 	color: #32425c;
 }
 
-.credit-button-item {
+.service-description p {
+	margin-bottom: 0;
+}
+
+.credit-item-button {
+	margin-top: 28px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 45px;
 	padding-right: 44px;
 }
 
-.tab-button:hover + label,
-.tab-button:focus + label {
+.delivery-button:hover ~ .service-slider-controls .control-delivery,
+.delivery-button:focus ~ .service-slider-controls .control-delivery {
 	background-color: #293449;
 }
 
-.tab-button:checked + label {
+.warranty-button:hover ~ .service-slider-controls .control-warranty,
+.warranty-button:focus ~ .service-slider-controls .control-warranty {
+	background-color: #293449;
+}
+
+.credit-button:hover ~ .service-slider-controls .control-credit,
+.credit-button:focus ~ .service-slider-controls .control-credit {
+	background-color: #293449;
+}
+
+
+.delivery-button:checked ~ .service-slider-controls .control-delivery,
+.warranty-button:checked ~ .service-slider-controls .control-warranty,
+.credit-button:checked ~ .service-slider-controls .control-credit {
 	color: #32425c;
 	background-color: #ffffff;
 	box-shadow: none;
 	border-color: #ffffff;
 }
 
-.service-list-button::after {
+.service-slider-controls::after {
 	content: "";
 	position: absolute;
-	top: -35px;
+	top: -40px;
 	left: 231px;
 	width: 10px;
 	height: 270px;
@@ -1092,11 +1190,12 @@ input[type="radio"].visually-hidden {
 	background-position: 0 0;
 }
 
-.service-list-content {
-	width: 630px;
-}
-
 .service-delivery {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
 	background-color: transparent;
 	background-image: url("../img/img-delivery.png");
 	background-repeat: no-repeat;
@@ -1104,7 +1203,11 @@ input[type="radio"].visually-hidden {
 }
 
 .service-warranty {
-	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
 	background-color: transparent;
 	background-image: url("../img/img-warranty.png");
 	background-repeat: no-repeat;
@@ -1112,23 +1215,31 @@ input[type="radio"].visually-hidden {
 }
 
 .service-credit {
-	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
 	background-color: transparent;
 	background-image: url("../img/img-credit.png");
 	background-repeat: no-repeat;
 	background-position: 100% 0;
 }
 
+.delivery-button:checked ~ .service-list-content .service-delivery,
+.warranty-button:checked ~ .service-list-content .service-warranty,
+.credit-button:checked ~ .service-list-content .service-credit {
+	display: block;
+	animation: boingInUp 1s;
+}
+
 /* ---------------------------------------- */
 /* 				Section Company 			*/
 /* ---------------------------------------- */
 
-.index-columns {
-	display: flex;
-	justify-content: space-between;
-	padding-top: 79px;
+.about-company {
+	padding-top: 78px;
 	padding-bottom: 86px;
-	color: #000000;
 }
 
 .company {
@@ -1372,7 +1483,7 @@ input[type="radio"].visually-hidden {
 	border-radius: 50%;
 	box-shadow: 0px 3px 1px -1px #cccccc;
 	cursor: pointer;
-	z-index: 100;
+	z-index: 1;
 }
 
 .low-rage {
@@ -1527,6 +1638,7 @@ input[type="radio"].visually-hidden {
 	text-transform: uppercase;
 	background-color: #ffffff;
 	border: 1px solid #c5c5c5;
+	cursor: pointer;
 }
 
 .filter-button:hover,
@@ -1817,11 +1929,18 @@ input[type="radio"].visually-hidden {
 	list-style: none;
 }
 
+.footer-item-bottom {
+	margin-left: 58px;
+}
+
+.footer-item-bottom:first-child {
+	margin-left: 0;
+}
+
 .footer-item-bottom a {
 	display: block;
 	margin-top: 0;
 	margin-bottom: 0;
-	margin-left: 58px;
 	color: #ffd180;
 }
 
@@ -2004,6 +2123,7 @@ input[type="radio"].visually-hidden {
 	display: none;
 	color: #000000;
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+	overflow: hidden;
 }
 
 .modal-show {
@@ -2171,7 +2291,6 @@ input[type="radio"].visually-hidden {
 	margin-left: -470px;
 	width: 940px;
 	height: 446px;
-	overflow: hidden;
 }
 
 .modal-map p {
@@ -2196,10 +2315,12 @@ input[type="radio"].visually-hidden {
 .modal-order {
 	top: 50%;
 	left: 50%;
+	margin-top: -145px;
 	margin-left: -310px;
 	width: 620px;
 	background-color: #ffffff;
 	border-top: 7px solid #ff5257;
+	z-index: 2;
 }
 
 .modal-order-top {
@@ -2248,4 +2369,9 @@ input[type="radio"].visually-hidden {
 	color: #000000;
 	background-color: #ffffff;
 	border: none;
+}
+
+.continue-button:hover,
+.continue-button:focus {
+	color: #ffffff;
 }

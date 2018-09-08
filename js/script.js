@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 
-
+	//Оживление слайдера
 	var slides = document.querySelectorAll('.sliders-list .slider-item');
 	var currentSlide = 0;
 
@@ -162,28 +162,30 @@ document.addEventListener('DOMContentLoaded', function() {
 	var next = document.getElementById('next');
 	var previous = document.getElementById('previous');
 
-	next.onclick = function() {
-		nextSlide();
-	};
+	if (next & previous) {
+		next.onclick = function() {
+			nextSlide();
+		};
 
-	previous.onclick = function() {
-		previousSlide();
-	};
+		previous.onclick = function() {
+			previousSlide();
+		};
 
-	var dots = document.querySelectorAll('.dot-button');
+		var dots = document.querySelectorAll('.dot-button');
 
-	for(let i = 0; i < dots.length; i++) {
-		dots[i].addEventListener('click', function(evt) {
-			evt.preventDefault();
-			ShowSlides(i);
-			goToSlide(i);
-		});
-	}
-
-	function ShowSlides(n) {
-		for (let i = 0; i < dots.length; i++) {
-			dots[i].classList.remove('active-dot');
+		for(let i = 0; i < dots.length; i++) {
+			dots[i].addEventListener('click', function(evt) {
+				evt.preventDefault();
+				ShowSlides(i);
+				goToSlide(i);
+			});
 		}
-		dots[n].classList.add('active-dot');
-	};
+
+		function ShowSlides(n) {
+			for (let i = 0; i < dots.length; i++) {
+				dots[i].classList.remove('active-dot');
+			}
+			dots[n].classList.add('active-dot');
+		};
+	}
 });

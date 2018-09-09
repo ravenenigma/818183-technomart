@@ -141,28 +141,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	//Оживление слайдера
 	var slides = document.querySelectorAll('.sliders-list .slider-item');
-	var currentSlide = 0;
-
-	function nextSlide() {
-		goToSlide(currentSlide+1);
-		ShowSlides(currentSlide);
-	}
-
-	function previousSlide() {
-		goToSlide(currentSlide-1);
-		ShowSlides(currentSlide);
-	}
-
-	function goToSlide(n) {
-		slides[currentSlide].className = 'slider-item';
-		currentSlide = (n+slides.length)%slides.length;
-		slides[currentSlide].className = 'slider-item slide-showing';
-	}
-
 	var next = document.getElementById('next');
 	var previous = document.getElementById('previous');
+	var currentSlide = 0;
 
-	if (next & previous) {
+	if (next || previous) {
+
+		function nextSlide() {
+			goToSlide(currentSlide+1);
+			ShowSlides(currentSlide);
+		}
+
+		function previousSlide() {
+			goToSlide(currentSlide-1);
+			ShowSlides(currentSlide);
+		}
+
+		function goToSlide(n) {
+			slides[currentSlide].className = 'slider-item';
+			currentSlide = (n+slides.length)%slides.length;
+			slides[currentSlide].className = 'slider-item slide-showing';
+		}
+
 		next.onclick = function() {
 			nextSlide();
 		};
